@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">sleeptrackverthree</string>
+    <string name="stopwatch_st">SleepWatch</string>
+    <string name="alarmclock_st">alarmClock</string>
+    <string name="home_st">Home</string>
+    <string name="dashboard_st">Dashboard</string>
+    <string name="about_st">About</string>
+    <string name="men_dashboard_st">Dashboard</string>
+    <string name="alarm_clock_St">Alarm Clock</string>
+    <string name="stop_watch_st_2">Sleep Watch</string>
+    <string name="clock_seconds">0:00:00</string>
+    <string name="clock_rem">00</string>
+    <string name="time_laps_st">Na Times</string>
+    <string name="Grap_Lin_men">Graph Line</string>
+    <string name="graph_line">Graph Line</string>
+    <string name="cdjm_sleep_tracker_st">The CDJM Sleep Tracker</string>
+    <string name="for_home_icon_st">For Home Icon</string>
+    <string name="for_alarm_clock_st">For Alarm Clock</string>
+    <string name="for_sleep_stats_st">For Sleep Stats</string>
+    <string name="for_sleep_watch_st">For Sleep Watch</string>
+    <string name="easy_sleep_tracking_for_all_users_st">Easy sleep tracking for all users.</string>
+</resources>

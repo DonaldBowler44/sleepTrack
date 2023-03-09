@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "352764253218",
+    "project_id": "sleeptrakapp",
+    "storage_bucket": "sleeptrakapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352764253218:android:431b8459c720c96c37667b",
+        "android_client_info": {
+          "package_name": "com.example.sleeptrackverthree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352764253218-uj4aanhrq42fsi8pr5f8b0fn4irmdgsu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRuNpQbV2Gtwgi0I8BMRFRQ-7doVCst-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352764253218-uj4aanhrq42fsi8pr5f8b0fn4irmdgsu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
