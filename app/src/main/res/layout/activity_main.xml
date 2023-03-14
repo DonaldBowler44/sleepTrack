@@ -93,16 +93,13 @@
         android:layout_height="51dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="160dp"
         android:layout_marginTop="208dp"
-        android:layout_marginEnd="13dp"
         android:layout_marginBottom="472dp"
         android:text="@string/for_home_icon_st"
         android:textSize="30sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView3"

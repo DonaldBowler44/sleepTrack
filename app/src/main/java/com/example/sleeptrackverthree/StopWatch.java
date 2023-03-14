@@ -257,18 +257,25 @@ public class StopWatch extends AppCompatActivity {
         // adding ms to lap next
         laptext = laptext + ":" + msString;
 
-        if(lapCount >= 10) {
-            laptext = " Lap " + lapCount + " ------------->       " + laptext + " \n " + timeLapse.getText();
-        } else {
-            laptext = " Lap " + lapCount + " --------------->       " + laptext + " \n " + timeLapse.getText();
-        }
+        laptext = " Nap " + lapCount + " ------------->       " + laptext + " \n " + timeLapse.getText();
+
+//        if(lapCount >= 10) {
+//            laptext = " Lap " + lapCount + " ------------->       " + laptext + " \n " + timeLapse.getText();
+//        } else {
+//            laptext = " Lap " + lapCount + " --------------->       " + laptext + " \n " + timeLapse.getText();
+//        }
 
         String minData = String.valueOf(minutes);
         String lapData = String.valueOf(lapCount);
         String secTime = String.valueOf(seconds);
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd HHmmss");
+        String formattedDate = now.format(formatter);
         Map<String, Object> fire = new HashMap<>();
 
-        fire.put(lapData, secTime);
+
+        //fire.put(lapData, secTime);
+        fire.put(formattedDate, secTime);
         // for fire.put its key first, then value like key, secTime
 
 
@@ -278,6 +285,8 @@ public class StopWatch extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d("StopWatch", "DocumentSnapshot successfully written!");
+                        //.update(fire) use this when you want to add aleady existing data,
+                        //.set(fire) to add data
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

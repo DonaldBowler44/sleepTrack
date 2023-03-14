@@ -24,139 +24,139 @@
             <!-- Outter Card View -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_clock"
-                android:elevation="24dp"
-                app:cardElevation="24dp"
-                app:cardCornerRadius="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="487dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="600dp">
+                android:elevation="24dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="24dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="490dp">
 
                     <!-- Stopwatch icon image view -->
                     <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="14dp"
-                        android:src="@drawable/stopwatch"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"/>
+                        android:src="@drawable/stopwatch" />
 
                     <!-- stop watch text view parent -->
                     <androidx.cardview.widget.CardView
-                        android:layout_marginTop="8dp"
+                        android:layout_width="200dp"
+                        android:layout_height="64dp"
                         android:layout_alignParentTop="true"
                         android:layout_centerInParent="true"
+                        android:layout_marginTop="8dp"
                         android:foregroundGravity="center"
-                        app:cardCornerRadius="20dp"
-                        app:cardElevation="8dp"
                         app:cardBackgroundColor="@color/colorPrimary"
-                        android:layout_width="200dp"
-                        android:layout_height="64dp">
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp">
                         <!-- stop watch text -->
 
                         <TextView
-                            android:textAllCaps="true"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
-                            android:layout_marginBottom="8dp"
                             android:id="@+id/title"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:layout_gravity="center_horizontal"
-                            android:textSize="32dp"
-                            android:fontFamily="sans-serif-condensed-medium"
-                            android:text="@string/stop_watch_st_2"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:gravity="center"
+                            android:text="@string/stop_watch_st_2"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="32dp"
+                            android:textStyle="bold" />
 
                     </androidx.cardview.widget.CardView>
 
                     <!-- stop watch time parent card view -->
                     <androidx.cardview.widget.CardView
-                        app:cardCornerRadius="180dp"
-                        android:elevation="40dp"
-                        app:cardElevation="40dp"
-                        android:layout_centerInParent="true"
                         android:layout_width="240dp"
-                        android:layout_height="240dp">
+                        android:layout_height="240dp"
+                        android:layout_centerInParent="true"
+                        android:elevation="40dp"
+                        app:cardCornerRadius="180dp"
+                        app:cardElevation="40dp">
 
                         <!-- stopwatch time without ms text view -->
                         <TextView
-                            android:textAlignment="center"
-                            android:textStyle="bold"
+                            android:id="@+id/time_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
+                            android:layout_gravity="center"
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
                             android:gravity="center"
                             android:text="@string/clock_seconds"
-                            android:layout_gravity="center"
+                            android:textAlignment="center"
                             android:textColor="@color/textColor"
-                            android:id="@+id/time_view"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="56sp" />
+                            android:textSize="56sp"
+                            android:textStyle="bold" />
 
                         <!-- stopwatch time with ms text view -->
                         <TextView
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:layout_marginTop="60dp"
                             android:id="@+id/time_view_ms"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginLeft="8dp"
+                            android:layout_marginTop="60dp"
                             android:layout_marginRight="8dp"
                             android:gravity="center"
-                            android:text = "@string/clock_rem"
+                            android:text="@string/clock_rem"
+                            android:textAlignment="center"
                             android:textColor="@color/textColor"
-                            android:textSize="24sp" />
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
                     <!-- Linear layout containing the start ,stop ,pause ,lap image view -->
                     <LinearLayout
-                        android:layout_marginBottom="8dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentBottom="true"
-                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
                         <!-- time lapse image view -->
                         <ImageView
-                            android:focusable="true"
-                            android:visibility="gone"
-                            android:clickable="true"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/icon_timelapse"
                             android:id="@+id/timeLapseBtn"
                             android:layout_width="80dp"
-                            android:layout_height="80dp" />
+                            android:layout_height="80dp"
+                            android:layout_margin="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/icon_timelapse"
+                            android:visibility="gone" />
                         <!-- time pause image view -->
                         <ImageView
-                            android:focusable="true"
-                            android:clickable="true"
-                            android:visibility="gone"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/pause_icon"
                             android:id="@+id/pauseBtn"
                             android:layout_width="80dp"
-                            android:layout_height="80dp" />
+                            android:layout_height="80dp"
+                            android:layout_margin="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/pause_icon"
+                            android:visibility="gone" />
                         <!-- time stop image view -->
                         <ImageView
-                            android:focusable="true"
-                            android:clickable="true"
-                            android:visibility="gone"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/stop_icon"
                             android:id="@+id/stopBtn"
                             android:layout_width="80dp"
-                            android:layout_height="80dp" />
+                            android:layout_height="80dp"
+                            android:layout_margin="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/stop_icon"
+                            android:visibility="gone" />
                         <!-- time play image view -->
                         <ImageView
                             android:id="@+id/playBtn"
@@ -203,12 +203,12 @@
                         android:layout_height="wrap_content">
                         <!-- lap text view -->
                         <TextView
-                            android:padding="16dp"
                             android:id="@+id/timeLapse"
-                            android:isScrollContainer="true"
-                            android:layout_below="@id/title"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="96dp"
+                            android:layout_below="@id/title"
+                            android:isScrollContainer="true"
+                            android:padding="16dp" />
                     </LinearLayout>
                 </ScrollView>
             </androidx.cardview.widget.CardView>

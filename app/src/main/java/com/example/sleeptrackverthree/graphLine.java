@@ -3,6 +3,7 @@ package com.example.sleeptrackverthree;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 public class graphLine extends AppCompatActivity {
@@ -42,28 +45,27 @@ public class graphLine extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        // Retrieve data from Firestore and load it into variables for the chart
+
         db.collection("Records").document("time").get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @SuppressLint("SuspiciousIndentation")
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        if (documentSnapshot.exists()) {
-                            // Retrieve the data from document
-                            String positionStr = documentSnapshot.getString("1");
-                            String positionStrTwo = documentSnapshot.getString("2");
-                            String positionStrThree = documentSnapshot.getString("3");
-                            int positionInt = Integer.parseInt(positionStr);
-                            int positionIntTwo = Integer.parseInt(positionStrTwo);
-                            int positionIntThree = Integer.parseInt(positionStrThree);
-
-
-                            //Create the chart entries
+                        if(documentSnapshot.exists()) {
+                            List<String> fieldNames = new ArrayList<>(documentSnapshot.getData().keySet());
+                            Collections.sort(fieldNames);
+                            float i = 0.0f;
                             ArrayList<BarEntry> entries = new ArrayList<>();
-                            entries.add(new BarEntry(1f, positionInt));
-                            entries.add(new BarEntry(2f, positionIntTwo));
-                            entries.add(new BarEntry(3f, positionIntThree));
+                            for(String fieldName : fieldNames ) {
+                                Object value = documentSnapshot.get(fieldName);
+                                if( value instanceof String) {
+                                    String stringValue = (String) value;
+                                    Log.d("graphLine", fieldName + ": (this is value >) " + stringValue);
+                                    entries.add(new BarEntry(i, Float.parseFloat(stringValue)));
+                                    i++;
+                                }
+                            }
 
-                            //Set up the chart data
                             BarDataSet dataSet = new BarDataSet(entries, "label");
                             dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
                             BarData data = new BarData(dataSet);
@@ -72,17 +74,15 @@ public class graphLine extends AppCompatActivity {
                             BarChart chart = findViewById(R.id.idBarChart);
                             chart.setData(data);
                             chart.invalidate();
-                        } else {
-                            // Handle case if document doesn't exist
                         }
                     }
-                }).addOnFailureListener(new OnFailureListener() {
+                })
+                .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.d("graphLine", "Error getting document" + e);
+                        Log.e("graphLine", "Error getting document", e);
                     }
                 });
-
 
 
 
