@@ -8,10 +8,83 @@
     tools:context=".graphLine">
 
     <!--Ui component for our bar chart-->
+
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/idBarChart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="288dp" />
+
+    <TextView
+        android:layout_width="410dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="489dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="198dp"
+        android:text="@string/sleep_log_st"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="531dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="66dp"
+        android:elevation="24dp"
+        android:paddingTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="24dp">
+
+        <!-- lap time title -->
+        <!--        <TextView-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:textSize="24dp"-->
+        <!--            android:layout_marginLeft="12dp"-->
+        <!--            android:text="@string/sleep_log_st"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- lap text view -->
+
+            <!--                android:layout_height="162dp"-->
+            <TextView
+                android:id="@+id/StarRateText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200"
+                android:isScrollContainer="true"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_GraphLi"
@@ -22,6 +95,8 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_navigation" />
+
+
 
 
 </RelativeLayout>

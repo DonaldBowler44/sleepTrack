@@ -12,6 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Start the animation
         fadeInTwo.start();
+
+        //Textview for current time
+        TextView currDate = findViewById(R.id.currentTime);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+        String currentDateandTime = sdf.format(new Date());
+        currDate.setText(currentDateandTime);
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottom_navigation);

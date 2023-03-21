@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Sleeptrackverthree"
         tools:targetApi="31">
         <activity
+            android:name=".RatingBarFile"
+            android:exported="false" />
+        <activity
             android:name=".graphLine"
             android:exported="false" />
         <activity

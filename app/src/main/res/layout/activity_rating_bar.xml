@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RatingBarFile">
+
+    <TextView
+        android:id="@+id/textViewRate"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="615dp"
+        android:text="@string/rate_sleep_quality_out_of_five_stars"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical">
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:numStars="5"
+            android:saveEnabled="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/RBButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_RBBut" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRadio"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="444dp"
+        android:text="@string/radio_St"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+    <!-- this was missing in Radiogroup, android:orientation="vertical"-->
+    <RadioGroup
+        android:id="@+id/RGRB"
+        android:layout_width="410dp"
+        android:layout_height="195dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="-4dp"
+        android:layout_marginBottom="50dp"
+        >
+
+        <RadioButton
+            android:id="@+id/pickOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pickOne_st" />
+
+        <RadioButton
+            android:id="@+id/pickTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pickTwo_st" />
+
+        <RadioButton
+            android:id="@+id/pickThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pickThree_st" />
+
+        <RadioButton
+            android:id="@+id/pickFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pickFour_st" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="160dp"
+        android:text="@string/Done_st" />
+</RelativeLayout>

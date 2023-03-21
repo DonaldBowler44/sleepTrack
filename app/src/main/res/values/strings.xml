@@ -19,4 +19,14 @@
     <string name="for_sleep_stats_st">For Sleep Stats</string>
     <string name="for_sleep_watch_st">For Sleep Watch</string>
     <string name="easy_sleep_tracking_for_all_users_st">Easy sleep tracking for all users.</string>
+    <string name="this_is_the_rating_bar_st">Rate your sleep</string>
+    <string name="submit_RBBut">Submit</string>
+    <string name="pickOne_st">Well Rested</string>
+    <string name="pickTwo_st">Woke Up Drowsy</string>
+    <string name="pickThree_st">Did Not Sleep</string>
+    <string name="pickFour_st">Slept only few hours</string>
+    <string name="radio_St">How did you sleep?</string>
+    <string name="Done_st">Done</string>
+    <string name="rate_sleep_quality_out_of_five_stars">Rate sleep quality out of five stars:</string>
+    <string name="sleep_log_st">Sleep Log</string>
 </resources>

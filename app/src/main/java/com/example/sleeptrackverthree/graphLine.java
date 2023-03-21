@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -17,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import android.graphics.Color;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -31,19 +33,35 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
 public class graphLine extends AppCompatActivity {
 
-    private FirebaseFirestore db;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    // to show log and star rate
+    TextView sleepLogV;
+
+    //String sleepLogRTextOne;
+    //String sleepLogRTextTwo;
+    //String sleepLogRTextThree = "";
+
+    private ArrayList<String> sleepLogRTextOneList = new ArrayList<>();
+    private ArrayList<String> sleepLogRTextTwoList = new ArrayList<>();
+    //private ArrayList<String> getSleepLogRTextThreeList = new ArrayList<>();
+    private ArrayList<String> getFieldDates = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph_line);
 
-        db = FirebaseFirestore.getInstance();
+        //init text view objects
+        sleepLogV = (TextView) findViewById(R.id.StarRateText);
+
 
 
         db.collection("Records").document("time").get()
@@ -63,6 +81,7 @@ public class graphLine extends AppCompatActivity {
                                     Log.d("graphLine", fieldName + ": (this is value >) " + stringValue);
                                     entries.add(new BarEntry(i, Float.parseFloat(stringValue)));
                                     i++;
+
                                 }
                             }
 
@@ -84,7 +103,9 @@ public class graphLine extends AppCompatActivity {
                     }
                 });
 
+        sleepLogVFun();
 
+        //sleepLogRTextThree = sleepLogRTextOne + " " + sleepLogRTextTwo;
 
 
 
@@ -121,6 +142,99 @@ public class graphLine extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    void sleepLogVFun() {
+        // get data from database and then store it into a string
+
+
+        db.collection("sleepradioB").document("Desc").get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @SuppressLint("SuspiciousIndentation")
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if(documentSnapshot.exists()) {
+                            List<String> fieldNames = new ArrayList<>(documentSnapshot.getData().keySet());
+                            Collections.sort(fieldNames);
+                            for(String fieldName : fieldNames ) {
+                                Object value = documentSnapshot.get(fieldName);
+                                if( value instanceof String) {
+                                    String stringValue = (String) value;
+                                    Log.d("graphLine", fieldName + ": (this is desc value >) " + stringValue);
+                                    //sleepLogRTextOne = stringValue;
+                                    //Log.d("graphLine", fieldName + ": (this is sLRT1 value >) " + sleepLogRTextOne);
+                                    sleepLogRTextOneList.add(stringValue);
+                                    sleepLogVFuncTwo();
+
+
+                                }
+                            }
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("graphLine", "Error getting document", e);
+                    }
+                });
+
+
+
+    }
+
+    void sleepLogVFuncTwo() {
+        db.collection("starRatings").document("rate").get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @SuppressLint("SuspiciousIndentation")
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if(documentSnapshot.exists()) {
+                            List<String> fieldNames = new ArrayList<>(documentSnapshot.getData().keySet());
+                            Collections.sort(fieldNames);
+                            for(String fieldName : fieldNames ) {
+                                Object value = documentSnapshot.get(fieldName);
+                                if( value instanceof String) {
+                                    String stringValueSR = (String) value;
+                                    Log.d("graphLine", fieldName + ": (this is StarRate value >) " + stringValueSR);
+                                    //sleepLogRTextTwo = stringValueSR;
+                                    //Log.d("graphLine", fieldName + ": (this is sLRT2 value >) " + sleepLogRTextTwo);
+                                    //sleepLogRTextThree = fieldName + ": " + sleepLogRTextOne + "| " + sleepLogRTextTwo;
+                                    //Log.d("graphLine", " this is a new value : " + sleepLogRTextThree);
+                                    sleepLogRTextTwoList.add(stringValueSR);
+                                    getFieldDates.add(fieldName);
+                                    //sleepLogV.setText(sleepLogRTextThree);
+
+                                }
+                            }
+
+                        }
+                        updateSleepLogTextView();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("graphLine", "Error getting document", e);
+                    }
+                });
+
+    }
+
+    private void updateSleepLogTextView() {
+        HashSet<String> getSleepLogRTextThreeList = new HashSet<>();
+        for(int i = 0; i < sleepLogRTextOneList.size(); i++) {
+            String sLRTO = sleepLogRTextOneList.get(i);
+            String sLRTT = sleepLogRTextTwoList.get(i);
+            String fNS = getFieldDates.get(i);
+            String sLRTThree = fNS + ": " + sLRTO + " | " + sLRTT;
+            getSleepLogRTextThreeList.add(sLRTThree);
+        }
+        String sleepLogText = TextUtils.join("\n\n", getSleepLogRTextThreeList);
+        Log.d("graphLine", ": (this is SleepLogText value >) " + sleepLogText);
+        sleepLogV.setText(sleepLogText);
 
     }
 
