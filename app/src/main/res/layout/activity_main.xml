@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal2ndver"
     tools:context=".MainActivity">
 
     <TextView
@@ -21,14 +22,15 @@
         android:layout_marginBottom="612dp"
         android:text="@string/cdjm_sleep_tracker_st"
         android:textSize="40sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/teal_700"
+        app:itemBackground="@color/teal2ndver"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_navigation" />
@@ -45,7 +47,8 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="293dp"
         android:layout_marginBottom="467dp"
-        app:srcCompat="@drawable/homeicon" />
+        app:srcCompat="@drawable/homeicon"
+        />
 
     <ImageView
         android:id="@+id/imageView2"

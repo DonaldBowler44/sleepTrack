@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".graphLine">
+    tools:context=".graphLine"
+    android:background="@color/teal2ndver"
+    >
 
     <!--Ui component for our bar chart-->
 
@@ -23,20 +25,22 @@
         android:layout_marginBottom="288dp" />
 
     <TextView
-        android:layout_width="410dp"
-        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="489dp"
+        android:layout_marginTop="482dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="198dp"
+        android:layout_marginBottom="204dp"
+        android:background="@drawable/rounded_background"
         android:text="@string/sleep_log_st"
         android:textSize="24dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cardCornerRadius="16dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -77,7 +81,6 @@
                 android:id="@+id/StarRateText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/teal_200"
                 android:isScrollContainer="true"
                 android:scrollbars="vertical" />
 
@@ -91,7 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/teal_700"
+        app:itemBackground="@color/teal2ndver"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_navigation" />

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal2ndver"
     tools:context=".StopWatch">
 
     <!-- Main Scroll View -->
@@ -53,7 +54,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginTop="8dp"
                         android:foregroundGravity="center"
-                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardBackgroundColor="@color/teal2ndver"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="8dp">
                         <!-- stop watch text -->
@@ -135,7 +136,7 @@
                             android:layout_margin="8dp"
                             android:clickable="true"
                             android:focusable="true"
-                            android:src="@drawable/icon_timelapse"
+                            android:src="@drawable/wakeup_two"
                             android:visibility="gone" />
                         <!-- time pause image view -->
                         <ImageView
@@ -145,7 +146,7 @@
                             android:layout_margin="8dp"
                             android:clickable="true"
                             android:focusable="true"
-                            android:src="@drawable/pause_icon"
+                            android:src="@drawable/pausebutton"
                             android:visibility="gone" />
                         <!-- time stop image view -->
                         <ImageView
@@ -155,7 +156,7 @@
                             android:layout_margin="8dp"
                             android:clickable="true"
                             android:focusable="true"
-                            android:src="@drawable/stop_icon"
+                            android:src="@drawable/stop_button"
                             android:visibility="gone" />
                         <!-- time play image view -->
                         <ImageView
@@ -165,7 +166,7 @@
                             android:layout_margin="8dp"
                             android:clickable="true"
                             android:focusable="true"
-                            android:src="@drawable/play_icon"
+                            android:src="@drawable/playbutton_two"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </LinearLayout>
                 </RelativeLayout>
@@ -220,7 +221,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/teal_700"
+        app:itemBackground="@color/teal2ndver"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_navigation" />

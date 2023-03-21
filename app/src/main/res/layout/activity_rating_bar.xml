@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal2ndver"
     tools:context=".RatingBarFile">
 
     <TextView
@@ -46,7 +47,9 @@
             android:id="@+id/RBButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/submit_RBBut" />
+            android:text="@string/submit_RBBut"
+            android:backgroundTint="@color/light_Grey"
+            />
 
     </LinearLayout>
 
@@ -84,25 +87,34 @@
             android:id="@+id/pickOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickOne_st" />
+            android:text="@string/pickOne_st"
+            android:button="@drawable/wellrestvertwo"
+            />
 
         <RadioButton
             android:id="@+id/pickTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickTwo_st" />
+            android:text="@string/pickTwo_st"
+            android:button="@drawable/drowsyvertwo"
+            />
 
         <RadioButton
             android:id="@+id/pickThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickThree_st" />
+            android:text="@string/pickThree_st"
+            android:button="@drawable/didnotsleepvertwo"
+            />
+
 
         <RadioButton
             android:id="@+id/pickFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickFour_st" />
+            android:text="@string/pickFour_st"
+            android:button="@drawable/sleptfewhoursvertwo"
+            />
     </RadioGroup>
 
     <Button
@@ -117,5 +129,8 @@
         android:layout_marginTop="523dp"
         android:layout_marginEnd="147dp"
         android:layout_marginBottom="160dp"
-        android:text="@string/Done_st" />
+        android:text="@string/Done_st"
+        android:backgroundTint="@color/light_Grey"
+        />
+
 </RelativeLayout>

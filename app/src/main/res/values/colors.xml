@@ -11,4 +11,9 @@
     <color name = "colorPrimaryDark">#1989C8</color>
     <color name = "colorAccent">#FF0D3D</color>
     <color name = "textColor">#0B1A37</color>
+    <color name = "yellow">#ffff00</color>
+    <color name = "light_Grey">#C8C8C8</color>
+    <color name = "teal2ndver">#7FFFD4</color>
+
+<!--    teal #7FFFD4-->
 </resources>

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal2ndver"
     tools:context=".AlarmClock">
 
 <LinearLayout
@@ -42,7 +43,7 @@ android:id="@+id/bottom_navigation_ALarmCl"
 android:layout_width="match_parent"
 android:layout_height="60dp"
 android:layout_alignParentBottom="true"
-app:itemBackground="@color/teal_700"
+app:itemBackground="@color/teal2ndver"
 app:itemIconTint="@drawable/selector"
 app:itemTextColor="@drawable/selector"
 app:menu="@menu/menu_navigation" />
