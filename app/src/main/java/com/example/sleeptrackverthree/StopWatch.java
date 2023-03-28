@@ -180,6 +180,10 @@ public class StopWatch extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.reminder:
+                        startActivity(new Intent(getApplicationContext(),ReminderSection.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return false;
             }

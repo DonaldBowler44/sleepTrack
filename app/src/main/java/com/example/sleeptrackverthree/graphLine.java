@@ -85,7 +85,7 @@ public class graphLine extends AppCompatActivity {
                                 }
                             }
 
-                            BarDataSet dataSet = new BarDataSet(entries, "label");
+                            BarDataSet dataSet = new BarDataSet(entries, "Recorded Sleep Times");
                             dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
                             BarData data = new BarData(dataSet);
 
@@ -113,7 +113,7 @@ public class graphLine extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation_GraphLi);
 
         // Set Home selected
-        bottomNavigationView.setSelectedItemId(R.id.stopwatch);
+        bottomNavigationView.setSelectedItemId(R.id.graphLine);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 
@@ -135,6 +135,10 @@ public class graphLine extends AppCompatActivity {
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.reminder:
+                        startActivity(new Intent(getApplicationContext(),ReminderSection.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

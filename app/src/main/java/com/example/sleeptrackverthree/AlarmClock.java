@@ -37,7 +37,7 @@ public class AlarmClock extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation_ALarmCl);
 
         // Set Home selected
-        bottomNavigationView.setSelectedItemId(R.id.stopwatch);
+        bottomNavigationView.setSelectedItemId(R.id.alarmclock);
 
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -60,6 +60,10 @@ public class AlarmClock extends AppCompatActivity {
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.reminder:
+                        startActivity(new Intent(getApplicationContext(),ReminderSection.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

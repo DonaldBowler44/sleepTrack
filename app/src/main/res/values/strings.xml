@@ -13,8 +13,8 @@
     <string name="time_laps_st">Nap Times</string>
     <string name="Grap_Lin_men">Graph Line</string>
     <string name="graph_line">Graph Line</string>
-    <string name="cdjm_sleep_tracker_st">The CDJM Sleep Tracker</string>
-    <string name="for_home_icon_st">For Home Icon</string>
+    <string name="cdjm_sleep_tracker_st">CDJM Sleep Tracker</string>
+    <string name="for_home_icon_st">For Home Page</string>
     <string name="for_alarm_clock_st">For Alarm Clock</string>
     <string name="for_sleep_stats_st">For Sleep Stats</string>
     <string name="for_sleep_watch_st">For Sleep Watch</string>

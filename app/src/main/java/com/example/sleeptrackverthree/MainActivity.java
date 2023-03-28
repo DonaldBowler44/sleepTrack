@@ -70,18 +70,12 @@ public class MainActivity extends AppCompatActivity {
         // Start the animation
         fadeInTwo.start();
 
-        //Textview for current time
-        TextView currDate = findViewById(R.id.currentTime);
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
-        String currentDateandTime = sdf.format(new Date());
-        currDate.setText(currentDateandTime);
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottom_navigation);
 
         // set Home selected
-        bottomNavigationView.setSelectedItemId(R.id.stopwatch);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
         //perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
@@ -103,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.graphLine:
                         startActivity(new Intent(getApplicationContext(),graphLine.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.reminder:
+                        startActivity(new Intent(getApplicationContext(),ReminderSection.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

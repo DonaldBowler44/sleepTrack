@@ -8,21 +8,31 @@
     android:background="@color/teal2ndver"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="700dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sleepbackground"
+        />
+
+
     <TextView
         android:id="@+id/CDJMTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_width="394dp"
+        android:layout_height="82dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="612dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="625dp"
         android:text="@string/cdjm_sleep_tracker_st"
         android:textSize="40sp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white"
+
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -102,21 +112,24 @@
         android:layout_marginBottom="472dp"
         android:text="@string/for_home_icon_st"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="238dp"
-        android:layout_height="51dp"
+        android:layout_width="254dp"
+        android:layout_height="61dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="157dp"
         android:layout_marginTop="307dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="373dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="363dp"
         android:text="@string/for_sleep_watch_st"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -134,7 +147,9 @@
         android:layout_marginBottom="263dp"
         android:text="@string/for_alarm_clock_st"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/textView5"
@@ -150,7 +165,9 @@
         android:layout_marginBottom="156dp"
         android:text="@string/for_sleep_stats_st"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/textView6"
@@ -160,27 +177,31 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="119dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="537dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="559dp"
         android:text="@string/easy_sleep_tracking_for_all_users_st"
+        android:textColor="@color/white"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/currentTime"
-        android:layout_width="394dp"
-        android:layout_height="wrap_content"
+
+    <DigitalClock
+
+        android:layout_width="250dp"
+        android:layout_height="79dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="586dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="78dp"
-        android:textSize="25sp"
+        android:layout_marginStart="107dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="585dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="67dp"
+        android:textColor="@color/white"
+        android:textSize="50dp"
         android:textStyle="bold" />
 
 </RelativeLayout>

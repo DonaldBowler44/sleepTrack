@@ -95,9 +95,8 @@
             android:id="@+id/pickTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickTwo_st"
             android:button="@drawable/drowsyvertwo"
-            />
+            android:text="@string/pickTwo_st" />
 
         <RadioButton
             android:id="@+id/pickThree"

@@ -20,5 +20,10 @@
         android:title="@string/Grap_Lin_men"
         android:icon="@drawable/line_chart"
         />
+    <item
+        android:id="@+id/reminder"
+        android:title="Reminders"
+        android:icon="@drawable/remind_icon"
+        />
 
 </menu>
