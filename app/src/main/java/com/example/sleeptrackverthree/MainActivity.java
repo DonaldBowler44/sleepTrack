@@ -48,28 +48,6 @@ public class MainActivity extends AppCompatActivity {
         // Start the animation
         fadeIn.start();
 
-        //second textview
-        TextView textViewTwo = findViewById(R.id.textView6);
-
-        // Set the alpha value of TextView to 0
-        textViewTwo.setAlpha(0f);
-
-        // create an ObjectAnimator to animate the alpha value to 0 to 1
-        ObjectAnimator fadeInTwo = ObjectAnimator.ofFloat(textViewTwo, "alpha", 0f, 1f);
-        fadeInTwo.setDuration(2000);
-
-        // Add a listener to set the visibility of the  TextView to VISIBLE when the animation is done
-        fadeInTwo.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                textViewTwo.setVisibility(View.VISIBLE);
-            }
-        });
-
-        // Start the animation
-        fadeInTwo.start();
-
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottom_navigation);

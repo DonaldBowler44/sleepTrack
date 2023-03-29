@@ -9,31 +9,188 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="450dp"
-        android:layout_height="700dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/sleepbackground"
-        />
-
-
-    <TextView
-        android:id="@+id/CDJMTitle"
-        android:layout_width="394dp"
-        android:layout_height="82dp"
+        android:layout_width="168dp"
+        android:layout_height="118dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="625dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="243dp"
+        android:layout_marginBottom="602dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sleepfox" />
+
+    <TextView
+        android:id="@+id/CDJMTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="607dp"
         android:text="@string/cdjm_sleep_tracker_st"
+        android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold|italic"
-        android:textColor="@color/white"
 
         />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="444dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="156dp"
+        app:cardCornerRadius="20dp">
+
+
+        <ImageView
+            android:layout_width="444dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/moonlogotwo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="30dp"
+            app:srcCompat="@drawable/homeicon" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_alignBaseline="@+id/imageView"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="130dp"
+            android:text="@string/for_home_icon_st"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/imageView"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="80dp"
+            app:srcCompat="@drawable/stopwatch" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageView2"
+            android:layout_alignBaseline="@+id/imageView2"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="130dp"
+            android:text="@string/for_sleep_watch_st"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/imageView2"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="80dp"
+            app:srcCompat="@drawable/alarmclock" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView3"
+            android:layout_alignBaseline="@+id/imageView3"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="130dp"
+            android:text="@string/for_alarm_clock_st"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/imageView3"
+            android:layout_marginTop="210dp"
+            android:layout_marginStart="80dp"
+            app:srcCompat="@drawable/line_chart" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView4"
+            android:layout_alignBaseline="@+id/imageView4"
+            android:layout_marginTop="210dp"
+            android:layout_marginStart="130dp"
+            android:text="@string/for_sleep_stats_st"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/imageView4"
+            android:layout_marginTop="270dp"
+            android:layout_marginStart="80dp"
+            app:srcCompat="@drawable/remind_icon" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView5"
+            android:layout_alignBaseline="@+id/imageView5"
+            android:layout_marginTop="270dp"
+            android:layout_marginStart="130dp"
+            android:text="@string/for_sleep_reminders_str"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:layout_marginStart="90dp"
+            android:text="@string/sleep_hygiene_optomized_st"
+            android:textSize="40sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            />
+
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -45,146 +202,6 @@
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_navigation" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="293dp"
-        android:layout_marginBottom="467dp"
-        app:srcCompat="@drawable/homeicon"
-        />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="299dp"
-        android:layout_marginEnd="290dp"
-        android:layout_marginBottom="368dp"
-        app:srcCompat="@drawable/stopwatch" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="405dp"
-        android:layout_marginEnd="290dp"
-        android:layout_marginBottom="262dp"
-        app:srcCompat="@drawable/alarmclock" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="508dp"
-        android:layout_marginEnd="279dp"
-        android:layout_marginBottom="151dp"
-        app:srcCompat="@drawable/line_chart" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="238dp"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="208dp"
-        android:layout_marginBottom="472dp"
-        android:text="@string/for_home_icon_st"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="254dp"
-        android:layout_height="61dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="307dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="363dp"
-        android:text="@string/for_sleep_watch_st"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="238dp"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="417dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="263dp"
-        android:text="@string/for_alarm_clock_st"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="238dp"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="524dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="156dp"
-        android:text="@string/for_sleep_stats_st"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="367dp"
-        android:layout_height="75dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="559dp"
-        android:text="@string/easy_sleep_tracking_for_all_users_st"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
 
 
     <DigitalClock
@@ -205,4 +222,3 @@
         android:textStyle="bold" />
 
 </RelativeLayout>
-

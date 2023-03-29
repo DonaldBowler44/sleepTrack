@@ -29,4 +29,6 @@
     <string name="Done_st">Done</string>
     <string name="rate_sleep_quality_out_of_five_stars">Rate sleep quality out of five stars:</string>
     <string name="sleep_log_st">Sleep Log</string>
+    <string name="for_sleep_reminders_str">For Reminders</string>
+    <string name="sleep_hygiene_optomized_st">Sleep Hygiene. Optomized.</string>
 </resources>
